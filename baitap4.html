@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         class studen {
+         constructor(id,name,gender,age,mark){
+            this.id=id,
+            this.name=name,
+            this.gender=gender,
+            this.age=age,
+            this.mark=mark
+        }
+    }
+      let studen1 = new studen(1,"nguyễn văn c","nam",20,8);
+      let studen2 = new studen(2,"nguyễn văn b","gay",10,9)
+   
+        let studens=[studen1,studen2];
+        let studen3 = new studen(3,"nguyễn văn a","nữ",2,1);
+        studens.push(studen3);
+        console.log(studens);
+        let tong=0
+        for(let i = 0;i<studens.length;i++){
+            tong+=studens[i].mark
+        }
+        console.log(`${tong} là điểm tổng của cả lớp`);
+        //  let tong = studens[0].mark+studens[1].mark+studens[2].mark
+        let diemtb = tong/studens.length
+    ;
+        if(diemtb>7.5){
+            console.log(`điểm trung bình của cả lớp là ${diemtb} cả lớp có học lực khá`);
+        }else if(diemtb < 7.5 &&diemtb > 5){
+            console.log(`điểm trung bình của cả lớp là ${diemtb} cả lớp có học lực trung bình`);
+        }else if(diemtb < 5){
+            console.log(`điểm trung bình của cả lớp là ${diemtb} cả lớp có học lực yếu`);
+        }
+    </script>
+</body>
+</html>

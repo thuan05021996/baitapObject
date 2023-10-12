@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class studen {
+         constructor(id,name,gender,age,mark){
+            this.id=id,
+            this.name=name,
+            this.gender=gender,
+            this.age=age,
+            this.mark=mark
+        }
+    }
+      let studen1 = new studen(1,"nguyễn văn c","nam",20,8);
+      let studen2 = new studen(2,"nguyễn văn b","gay",10,9);
+      let studen3 = new studen(3,"nguyễn văn b","gay",10,9);
+      let studen4 = new studen(4,"nguyễn văn b","gay",10,1);
+      let studen5 = new studen(5,"nguyễn văn b","gay",10,2);
+      let studens=[];
+      studens.push(studen1,studen2,studen3,studen4,studen5);
+      console.log(studens);
+
+
+     /*  let studengood=studens.filter(function(studens){
+        return studens.mark == 9
+      })
+      console.log(studengood);
+    */
+      /*   let studens=[studen1,studen2];
+        if(studens[0].mark>studens[1].mark){
+            console.log("đây là số điểm học sinh cao hơn", studens[0]);
+        }else{
+            console.log("đây là số học sinh cao hon", studens[1]);
+        } */
+        let max=studens[0].mark
+         for(let i =0;i<studens.length;i++){
+            if(max<=studens[i].mark){
+                max=studens[i].mark
+            }
+        } console.log(max,"qưeqw");
+        let result =studens.filter((studans )=>{
+            return studans.mark==max;
+        });
+        console.log(result);
+      
+    </script>
+</body>
+</html>

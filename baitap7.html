@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class course{
+            constructor(name,completed){
+                this.name=name,
+                this.completed=completed
+            }
+        };
+        let seesion1= new course("HTML","fasle");
+        let seesion2= new course("CSS","fasle")
+        let seesion3= new course("BASIC of javascripT","fasle")
+        let seesion4= new course("node packer manager","fasle")
+        let seesion5= new course("Git","fasle")
+        
+        let arr=[];
+        arr.push(seesion1,seesion2,seesion3,seesion4,seesion5)
+        console.log(arr);
+        function printcour(){
+            for(let i = 0;i < arr.length;i++){
+                console.log(`${i+1}. ${arr[i].name} -${arr[i].completed}`);
+            }
+
+        }
+        /* console.log(printcour(arr)); */
+        while(true){
+        let n=prompt("Mời bạn nhập CRUDE");
+            if(n=="C"){
+                let c=prompt("mời bạn nhập khóa học");
+                let c1=prompt("mời bạn nhập vào trạng thái của khóa học(true/fasle)")
+                let seesion6= new course(c,c1);
+                arr.push(seesion6);
+                console.log(printcour(arr));
+            } else if(n=="R"){
+                console.log("Đây là những khóa học :");
+                printcour();
+            }else if(n=="U"){
+                let u= +prompt("vị trí mà bạn muốn update");
+                for(let j = 0; j < arr.length;j++){
+                    if(u===j){
+                        let u1=prompt("Mời bạn cập nhật lại tên khóa học");
+                        let u2=prompt("Mời bạn nhập lại trạng thái khóa học");
+                         arr[j].name = u1;
+                         arr[j].completed = u2
+                    }
+                }
+                console.log("Cập nhật");
+                printcour();
+                
+            }else if(n=="D"){
+                let d=prompt("vị trí mà bạn muốn xóa")
+                arr.splice(d,1);
+                console.log("Cập nhật");
+                printcour()
+            }else if(n=="E"){
+                console.log("Bạn đẫ cập nhật khóa học thành công");
+                break;
+            }
+        }
+        
+    </script>
+</body>
+</html>

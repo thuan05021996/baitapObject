@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class user{
+            constructor(name,email,adress,phone,role){
+                this.name=name,
+                this.email=email,
+                this.adress=adress,
+                this.phone=phone,
+                this.role=role
+            }
+        }
+        
+        class Admin{
+            constructor(name,email,adress,phone,role){
+                this.name=name,
+                this.email=email,
+                this.adress=adress,
+                this.phone=phone
+            }
+        }
+        let user1 = new user("nguyễn văn a","At@gmail.com","HCM",+84545641);
+        let user2 = new user("nguyễn văn B","Bt@gmail.com","HCM",+84545642);
+        let user3 = new user("nguyễn văn C","Ct@gmail.com","HCM",+84545643);
+        let admin1= new Admin("tao là chủ","admin.com","hn"+9879);
+
+        
+    </script>
+</body>
+</html>
